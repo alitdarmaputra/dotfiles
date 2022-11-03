@@ -1,7 +1,4 @@
 window:
-  padding:
-    x: 6 
-    y: 6 
   dynamic_padding: true
   class:
     instance: Alacritty
@@ -35,9 +32,6 @@ colors:
     cyan: "#0db9d7"
     white: "#acb0d0"
 
-window:
-  opacity: 0.9
-
 selection:
   save_to_clipboard: false
 
@@ -50,3 +44,4 @@ key_bindings:
 font:
   normal:
     family: "MesloLGS NF"
+  size: 10.0 
