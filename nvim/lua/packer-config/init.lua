@@ -7,7 +7,8 @@ return require("packer").startup(function(use)
 	use("jiangmiao/auto-pairs") -- auto close tag
 	use("vim-airline/vim-airline") -- vim-airline
 	use("vim-airline/vim-airline-themes") -- airline-theme
-
+	use("mattn/emmet-vim") -- emmet vim
+	use("alvan/vim-closetag") -- html close tag
 	-- Colorschemes
 	use("folke/tokyonight.nvim")
 
@@ -21,8 +22,8 @@ return require("packer").startup(function(use)
 	use("onsails/lspkind.nvim") -- vscode like pictogram
 
 	-- snippets
-	use("L3MON4D3/LuaSnip") --snippet engine
 	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
+	use("L3MON4D3/LuaSnip") -- snippet engine
 
 	-- lsp
 	use("neovim/nvim-lspconfig") -- Configurations for Nvim LSP
@@ -45,4 +46,8 @@ return require("packer").startup(function(use)
 
 	-- vim comment
 	use("tpope/vim-commentary") -- gcc / gc
+	use("lewis6991/gitsigns.nvim") -- git sign
+
+	-- discord presence
+	use("andweeb/presence.nvim")
 end)

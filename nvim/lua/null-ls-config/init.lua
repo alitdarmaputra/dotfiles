@@ -12,8 +12,10 @@ null_ls.setup({
 	sources = sources,
 
 	on_attach = function(client)
-		if client.server_capabilities then
-			vim.cmd("autocmd BufwritePre <buffer> lua vim.lsp.buf.formatting_sync()")
+		if client.name == "tsserver" then
+			client.resolved_capabilities.document_formatting = false
+		elseif client.server_capabilities then
+			vim.cmd("autocmd BufwritePre <buffer> lua vim.lsp.buf.format()")
 		end
 	end,
 })
