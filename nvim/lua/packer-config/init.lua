@@ -8,9 +8,10 @@ return require("packer").startup(function(use)
 	use("vim-airline/vim-airline") -- vim-airline
 	use("vim-airline/vim-airline-themes") -- airline-theme
 	use("mattn/emmet-vim") -- emmet vim
-	use("alvan/vim-closetag") -- html close tag
+	use("windwp/nvim-ts-autotag") -- auto claose tag
 	-- Colorschemes
 	use("folke/tokyonight.nvim")
+	use({ "catppuccin/nvim", as = "catppuccin" })
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
@@ -49,5 +50,5 @@ return require("packer").startup(function(use)
 	use("lewis6991/gitsigns.nvim") -- git sign
 
 	-- discord presence
-	use("andweeb/presence.nvim")
+	-- use("andweeb/presence.nvim")
 end)

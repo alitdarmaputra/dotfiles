@@ -4,8 +4,7 @@ set.expandtab = true
 set.smarttab = true
 set.smartindent = true
 set.tabstop = 4
-set.shiftwidth = 4
-
+set.relativenumber = true
 set.hlsearch = true
 set.incsearch = true
 set.ignorecase = true
@@ -23,4 +22,4 @@ set.cursorline = true
 
 set.hidden = true
 set.completeopt = "menu,menuone,noselect"
-
+set.shiftwidth = 4

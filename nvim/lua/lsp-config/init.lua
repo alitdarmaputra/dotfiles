@@ -9,10 +9,6 @@ require("lspconfig")["clangd"].setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
-require("lspconfig")["html"].setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-})
 require("lspconfig")["jsonls"].setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
@@ -38,6 +34,14 @@ require("lspconfig")["cssls"].setup({
 	capabilities = capabilities,
 })
 require("lspconfig")["sumneko_lua"].setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+require("lspconfig")["gopls"].setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+require("lspconfig")["html"].setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })

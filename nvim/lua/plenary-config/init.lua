@@ -1,1 +1,1 @@
-local async = require "plenary.async"
+local async = require("plenary.async")
