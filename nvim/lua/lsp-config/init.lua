@@ -1,5 +1,6 @@
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
+local jsonSchema = require("schemastore").json.schemas()
 
 require("lspconfig")["pyright"].setup({
 	on_attach = on_attach,
@@ -12,6 +13,18 @@ require("lspconfig")["clangd"].setup({
 require("lspconfig")["jsonls"].setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
+	settings = {
+		json = {
+			schemas = {
+				jsonSchema,
+				{
+					fileMatch = { "*-spec.json" },
+					url = "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/schemas/v3.0/schema.json",
+				},
+			},
+			validate = { enable = true },
+		},
+	},
 })
 require("lspconfig")["dockerls"].setup({
 	on_attach = on_attach,
@@ -42,6 +55,10 @@ require("lspconfig")["gopls"].setup({
 	capabilities = capabilities,
 })
 require("lspconfig")["html"].setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+require("lspconfig")["yamlls"].setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
