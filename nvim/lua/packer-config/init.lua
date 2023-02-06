@@ -51,4 +51,8 @@ return require("packer").startup(function(use)
 
 	-- discord presence
 	-- use("andweeb/presence.nvim")
+	
+	-- schema store lsp
+	use("b0o/schemastore.nvim")
+
 end)
