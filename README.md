@@ -16,7 +16,7 @@ The configurations are tailored to my personal preferences and workflow, but you
 
 ## Spesifications
 
-- OS: Manjaro Linux x86_64
+- OS: Manjaro Linux
 - CPU: Intel i5
 - Memory: 12GB
 
