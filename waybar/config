@@ -9,9 +9,13 @@
 	// Choose the order of the modules
 	"modules-left": ["custom/my-menu", "hyprland/workspaces", "tray"],
 	"modules-center": ["clock"],
-	"modules-right": ["pulseaudio", "network", "cpu", "keyboard-state", "battery", "custom/logout-menu"],
+	"modules-right": ["pulseaudio", "network", "cpu", "keyboard-state", "battery", "custom/blue-light", "custom/logout-menu"],
 
 	// Modules configuration
+	"custom/blue-light": {
+		"format": "",
+		"on-click": "bash ~/.config/waybar/scripts/wlsunset/red_toggle.sh",
+	},
 	"custom/my-menu": {
 		"on-click": "rofi -show run -theme /usr/share/rofi/themes/tokyonight.rasi",
 		"tooltip": false,
