@@ -20,6 +20,16 @@ The configurations are tailored to my personal preferences and workflow, but you
 - CPU: Intel i5
 - Memory: 12GB
 
+## Depedencies
+
+- hypridle
+- hyprlock
+- hyprpaper
+- nm-applet
+- blueman-applet
+- dunst
+- wlsunset
+
 ## Preview
 ![Preview-1](https://github.com/alitdarmaputra/dotfiles/blob/master/preview/preview-1.png)
 
