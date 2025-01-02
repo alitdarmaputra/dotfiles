@@ -16,10 +16,6 @@ cmp.setup({
 		-- documentation = cmp.config.window.bordered(),
 	},
 	mapping = cmp.mapping.preset.insert({
-		["<C-b>"] = cmp.mapping.scroll_docs(-4),
-		["<C-f>"] = cmp.mapping.scroll_docs(4),
-		["<C-Space>"] = cmp.mapping.complete(),
-		["<C-e>"] = cmp.mapping.abort(),
 		["<Tab>"] = function(fallback)
 			if cmp.visible() then
 				cmp.select_next_item()
@@ -34,20 +30,18 @@ cmp.setup({
 				fallback()
 			end
 		end,
-		["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+		["<CR>"] = cmp.mapping.confirm({ select = true }),
+		["<C-e>"] = cmp.mapping.abort(),
+		["<Esc>"] = cmp.mapping.close(),
+		["<C-d>"] = cmp.mapping.scroll_docs(-4),
+		["<C-f>"] = cmp.mapping.scroll_docs(4),
 	}),
 	sources = cmp.config.sources({
-		-- Dont suggest Text from nvim_lsp
-		{
-			name = "nvim_lsp",
-			entry_filter = function(entry, ctx)
-				return require("cmp").lsp.CompletionItemKind.Text ~= entry:get_kind()
-			end,
-		},
+		{ name = "nvim_lsp" },
 		{ name = "vsnip" }, -- For vsnip users.
 		-- { name = 'luasnip' }, -- For luasnip users.
 		-- { name = 'ultisnips' }, -- For ultisnips users.
 		-- { name = 'snippy' }, -- For snippy users.
-		-- { name = "buffer" },
+		{ name = "buffer" },
 	}),
 })

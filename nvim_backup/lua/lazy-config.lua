@@ -13,6 +13,7 @@ require("lazy").setup({
 	"jiangmiao/auto-pairs",
 	"vim-airline/vim-airline",
 	"vim-airline/vim-airline-themes",
+	"mattn/emmet-vim",
 
 	-- colorscheme
 	{
@@ -29,7 +30,6 @@ require("lazy").setup({
 	"hrsh7th/cmp-path",
 	"hrsh7th/cmp-cmdline",
 	"hrsh7th/nvim-cmp",
-	"mattn/emmet-vim",
 
 	-- nvim cmp - vsnip engine
 	"hrsh7th/cmp-vsnip",
@@ -42,12 +42,7 @@ require("lazy").setup({
 	"rafamadriz/friendly-snippets",
 
 	-- formatter
-	{
-		"nvimtools/none-ls.nvim",
-		dependencies = {
-			"nvimtools/none-ls-extras.nvim",
-		},
-	},
+	"nvimtools/none-ls.nvim",
 
 	-- finder
 	"nvim-telescope/telescope.nvim",
@@ -74,56 +69,17 @@ require("lazy").setup({
 	-- better diagnostic display
 	{
 		"folke/trouble.nvim",
-		opts = {}, -- for default options, refer to the configuration section for custom setup.
-		cmd = "Trouble",
-		keys = {
-			{
-				"<leader>xx",
-				"<cmd>Trouble diagnostics toggle<cr>",
-				desc = "Diagnostics (Trouble)",
-			},
-			{
-				"<leader>xX",
-				"<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
-				desc = "Buffer Diagnostics (Trouble)",
-			},
-			{
-				"<leader>cs",
-				"<cmd>Trouble symbols toggle focus=false<cr>",
-				desc = "Symbols (Trouble)",
-			},
-			{
-				"<leader>cl",
-				"<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
-				desc = "LSP Definitions / references / ... (Trouble)",
-			},
-			{
-				"<leader>xL",
-				"<cmd>Trouble loclist toggle<cr>",
-				desc = "Location List (Trouble)",
-			},
-			{
-				"<leader>xQ",
-				"<cmd>Trouble qflist toggle<cr>",
-				desc = "Quickfix List (Trouble)",
-			},
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		opts = {
+			-- your configuration comes here
+			-- or leave it empty to use the default settings
+			-- refer to the configuration section below
 		},
 	},
 
 	-- debugger,,
 	"mfussenegger/nvim-dap",
-	{
-		"leoluz/nvim-dap-go",
-		dependencies = { "mfussenegger/nvim-dap" },
-	},
-	{
-		"mxsdev/nvim-dap-vscode-js",
-		dependencies = {
-			"microsoft/vscode-js-debug",
-			version = "1.x",
-			build = "npm i && npm run compile vsDebugServerBundle && mv dist out",
-		},
-	},
+	"leoluz/nvim-dap-go",
 	{
 		"folke/neodev.nvim",
 		opts = {},
@@ -138,16 +94,4 @@ require("lazy").setup({
 	{
 		"windwp/nvim-ts-autotag",
 	},
-
-	-- discord presence
-	{
-		"vyfor/cord.nvim",
-		build = "./build",
-		event = "VeryLazy",
-	},
-
-	-- dynamic shiftwidth
-	{ "tpope/vim-sleuth" },
-
-	"mfussenegger/nvim-jdtls",
 })

@@ -5,7 +5,6 @@ set.smartindent = true
 set.tabstop = 4
 set.number = true
 set.relativenumber = true
-set.expandtab = true
 
 set.hlsearch = true
 set.incsearch = true
@@ -15,7 +14,7 @@ set.smartcase = true
 set.splitright = true
 set.splitbelow = true
 
-set.wrap = false
+set.wrap = true 
 set.scrolloff = 5
 set.cursorline = true
 set.termguicolors = true
@@ -25,5 +24,3 @@ set.completeopt = "menu,menuone,noselect"
 set.shiftwidth = 4
 set.foldmethod = "indent"
 set.foldlevel = 3
-
-set.fixeol = false

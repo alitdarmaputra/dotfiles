@@ -6,16 +6,19 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
 require("nvim-tree").setup({
-    open_on_tab = false,
-    sort_by = "case_sensitive",
-    view = {
-        adaptive_size = true,
-    },
-    renderer = {
-        group_empty = true,
-    },
-    filters = {
-        dotfiles = false,
-    },
-    reload_on_bufenter = true,
+	open_on_tab = false,
+	sort_by = "case_sensitive",
+	view = {
+		adaptive_size = true,
+	},
+	renderer = {
+		group_empty = true,
+	},
+	filters = {
+		dotfiles = false,
+	},
+	reload_on_bufenter = true,
+	trash = {
+		cmd = "gio trash",
+	},
 })

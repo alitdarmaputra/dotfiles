@@ -9,28 +9,6 @@ require("null-ls").setup({
 		null_ls.builtins.formatting.gofumpt,
 		null_ls.builtins.formatting.goimports,
 		null_ls.builtins.formatting.mdformat,
-		-- null_ls.builtins.formatting.prettier.with({
-		-- 	filetypes = {
-		-- 		"javascript",
-		-- 		"javascriptreact",
-		-- 		"typescript",
-		-- 		"typescriptreact",
-		-- 		"vue",
-		-- 		"css",
-		-- 		"scss",
-		-- 		"less",
-		-- 		"json",
-		-- 		"jsonc",
-		-- 		"yaml",
-		-- 		"markdown",
-		-- 		"markdown.mdx",
-		-- 		"graphql",
-		-- 		"handlebars",
-		-- 	},
-		-- }),
-		-- require("none-ls.diagnostics.eslint_d").with({
-		-- 	only_local = "node_modules/.bin",
-		-- }),
 	},
 	-- you can reuse a shared lspconfig on_attach callback here
 	on_attach = function(client, bufnr)
